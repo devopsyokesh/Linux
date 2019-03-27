@@ -1,0 +1,129 @@
+server down memory/disk space/cpu
+log in server
+check memory
+ sudo dmidecode
+check freespace
+ free-m,cat /proc/meminfo, vmstat
+check total
+check load
+ https://www.binarytides.com/linux-command-check-memory-usage/
+total processor
+ # ps -aux | less
+configuration
+
+server disk space
+ df, df -a,df -H,h,--o,-m,-k,-t,-i,-x, man df
+ du, du -a,du -H,-h,--o,-m,-k,-t,-i,-x, man du
+check partition
+ sdisk,sfdisk,cfdisk,parted
+wer space acupied
+how to find biggest file in dir/sub dir
+ $ sudo du -a /dir/ | sort -n -r | head -n 20
+ find $HOME -type f -printf '%s %p\n' | sort -nr | head -10
+
+copy
+ cp -i,-R,-u
+paste
+move
+ mv
+delete
+ rm -f, -r
+add
+ addusr, addgrp, cat, touch, vi
+how to replace
+ sed -i 's/old-text/new-text/g' input.txt
+ sed -i 's/foo/bar/gI' hello.txt
+how to check running services
+how to service get auto restart after restart the machine
+
+scrpting
+how to zip
+how to find yesterday date
+how create 10 user in @ a time
+how to change file name
+how to change location name
+
+check if the application use port?
+is it end point or not?
+what is config file? wer it is?
+is the app has log? 
+
+
+how to install package?
+how to check it is installed?
+how to check installed date?
+
+what will do if disk failed?
+how to raid it?
+users add
+big file
+knowing about basic service?
+apache diff type of config?
+name based virtual host...
+ip based virtual host...
+domain based virtual host...
+commands for installing application
+should know, which application file is that...
+
+replace
+grep
+specific word should be taken.(grep)and replace
+date command
+date find
+find yesterday date. and should know to change day and day before yesterday
+
+aws
+how create instance? should know how to up
+assign public ip.
+should know to open port.
+should know to block port
+should know s3 bucket. giving access(pub/pri)
+
+what is cloud front. what is the use.
+what is redis. and its use. what we can do with.
+how to install mysql. how to login,get in... 
+
+how to replace word in file using linux.
+ [scd -i s /sting/replacesting/g]
+find one word and bring before 2 lines of the word and after 2 lines of the word...
+ [awk -f (filename)(sting) -a2 -b2]
+how to find last line of the file/last word of the file
+how to delete 10/30 line
+
+what is git
+how install git
+
+what is nginx
+ Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.Nginx is built to offer low memory usage and high concurrency.
+how to install
+ 1. install prerequisits
+ 2. vi /etc/nginx.repo
+ 3. use code from nginx website
+ 4. yum install nginx
+basics of nginx
+
+what is reverse proxy.
+ https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj2u9GY26DhAhXWdH0KHernD0UQjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FProxy_server&psig=AOvVaw1pHu1EBQy7YFsfI6JE7Qd9&ust=1553720750581370
+
+what is tomcat
+ web server
+how to install
+ change port = conf/server.xml
+ manage gui = webapps/context.xml
+ pasword = conf/tomcat_user.xml
+ start = bin/startup.sh
+ stop = bin/shutdown.sh
+basic of tomcat
+
+
+what is Dns port
+ 53
+what is DNS log file
+ analyse the activity on DNS server and whether DNS server is properly resolving accurately or not. rndc(remote name daemon control) is the command to use for DNS server activity logging.
+ #rndc querylog
+
+what is DNS conf
+ https://support.rackspace.com/how-to/changing-dns-settings-on-linux/
+
+what is httpd?
+ httpd is a web server whereas Tomcat is a Servlet Container. ... httpd is typically used to host static content and dynamic content written in perl, php amongst others. Tomcat is primarily intended to be used to serve web applications developed in Java to the Java Servlet specification 
