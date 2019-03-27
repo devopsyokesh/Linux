@@ -4,25 +4,33 @@ check memory
  sudo dmidecode
 check freespace
  free-m,cat /proc/meminfo, vmstat
+ 
 check total
 check load
  https://www.binarytides.com/linux-command-check-memory-usage/
+
 total processor
  # ps -aux | less
+
 configuration
 
 server disk space
  df, df -a,df -H,h,--o,-m,-k,-t,-i,-x, man df
  du, du -a,du -H,-h,--o,-m,-k,-t,-i,-x, man du
+
 check partition
  sdisk,sfdisk,cfdisk,parted
+
 wer space acupied
+
 how to find biggest file in dir/sub dir
  $ sudo du -a /dir/ | sort -n -r | head -n 20
  find $HOME -type f -printf '%s %p\n' | sort -nr | head -10
+ du -cks * | sort -rn | head
 
 copy
  cp -i,-R,-u
+
 paste
 move
  mv
@@ -33,11 +41,29 @@ add
 how to replace
  sed -i 's/old-text/new-text/g' input.txt
  sed -i 's/foo/bar/gI' hello.txt
+ sed 's+http://+https://www.cyberciti.biz+g' input.txt
+ sed -i 's/word1/word2/g' input
+ sed -i 's+word1+word2+g' input
+ sed -i 's/word1/word2/gI' input
+ sed -i 's_word1_word2_gI' input
 how to check running services
+ ps -ef | grep (service name), 
+ systemctl list-unit-files
+ systemd-cgtop
+ service --status-all
+ service --status-all | more
+ service --status-all | grep ntpd
+ service --status-all | less
 how to service get auto restart after restart the machine
+ system VSystem V, Upstart, and systemd services
+running services and its port
+ netstat -tulpn  
 
 scrpting
 how to zip
+ gzip /ftpusers/tmp/*.log
+ bzip2 /ftpusers/tmp/large.file.name
+
 how to find yesterday date
 how create 10 user in @ a time
 how to change file name
@@ -50,16 +76,31 @@ is the app has log?
 
 
 how to install package?
+ yum install
+ apt-get
+ dnf
+
 how to check it is installed?
+ which (package name)
+ 
 how to check installed date?
+  rpm -q --last [package_name]
 
 what will do if disk failed?
+
 how to raid it?
+ cat /etc/mdadm.conf
+ 
 users add
+
 big file
+
 knowing about basic service?
+
 apache diff type of config?
+
 name based virtual host...
+
 ip based virtual host...
 domain based virtual host...
 commands for installing application
@@ -69,8 +110,10 @@ replace
 grep
 specific word should be taken.(grep)and replace
 date command
+ date (-- yesterday,toamarow,1 day aga,%d,%m,%y)
 date find
 find yesterday date. and should know to change day and day before yesterday
+  find / -type f -mtime -1 
 
 aws
 how create instance? should know how to up
@@ -80,6 +123,7 @@ should know to block port
 should know s3 bucket. giving access(pub/pri)
 
 what is cloud front. what is the use.
+ it is content delivery proxy server, which provide cache server like of media cache for ease the downloading speed.
 what is redis. and its use. what we can do with.
 how to install mysql. how to login,get in... 
 
